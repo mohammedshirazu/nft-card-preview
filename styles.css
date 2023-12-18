@@ -1,0 +1,123 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    font-size: 1.8rem;
+}
+
+.card {
+    background-color: hsl(216, 50%, 16%);
+    color: hsl(215, 51%, 70%);
+    width: 30%;
+    min-width: 350px;
+    max-width: 700px;
+    height: 40%;
+    margin: 0 auto;
+    margin-top: 120px;
+    border-radius: 15px;
+    padding: 1.5em;
+    position: relative;
+    box-shadow: 10px 20px 5px 5px hsla(216, 50%, 10%, 0.5), -10px 20px 5px 5px hsla(216, 50%, 10%, 0.5),
+                20px 40px 5px 20px hsla(216, 50%, 16%, 0.2), -20px 40px 5px 20px hsla(216, 50%, 16%, 0.2);
+}
+
+.nft-img-div, .nft-img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.nft-img-div {
+    padding: 0;
+    position: relative;
+}
+
+.nft-img {
+    margin-block-end: -0.25em;
+}
+
+.view-icon {
+    position: absolute;
+    left: calc(50% - 24px);
+    top: calc(50% - 27px);
+    opacity: 0;
+    position: absolute;
+    color: #f1f1f1;
+    transition: .2s ease;
+    opacity: 0;
+    color: white;
+}
+
+.nft-img-div:hover::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(178, 100%, 50%);
+    border-radius: 15px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.nft-img-div:hover .view-icon {
+    opacity: 1;
+}
+
+.nft-name {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.value-time-div, .value-time-div div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.value-time-div div {
+    align-items: center;
+}
+
+.value-time-div div img {
+    margin-right: .5em;
+}
+
+.value-div p {
+    color: hsl(178, 100%, 50%);
+}
+
+hr {
+    border-color: hsl(215, 51%, 70%);
+}
+
+.creator-div {
+    display: flex;
+    align-items: center;
+}
+
+.creator-div img {
+    width: 2em;
+    height: 2em;
+    margin-right: .75em;
+}
+
+.creator-name {
+    color: white;
+}
+
+/* ACTIVE STATES */
+/* .nft-img:hover, .nft-img:focus {
+
+} */
+
+.nft-name:hover , .creator-name:hover {
+    color: hsl(178, 100%, 50%);
+    cursor: pointer;
+}
